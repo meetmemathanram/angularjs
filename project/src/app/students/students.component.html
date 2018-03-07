@@ -1,3 +1,18 @@
-<h2>{{ students.name | uppercase }} Details</h2>
+<h2><div>
+    <label>name:
+    <input [(ngModel)]="students.name" placeholder="name">
+    </label>
+</div>{{ students.name | uppercase }} Details</h2>
+
+<div> <label>name:
+    <input [(ngModel)]="students.id" placeholder="name">
+  </label>
+</div>
 <div><span>Id :</span> {{ students.id }}</div>
 <div><span>name :</span> {{ students.name }}</div>
+<h2>My Students</h2>
+<ul class ="students">
+  <li *ngFor="let students of stud">
+    <span class="badge">{{students.id}}</span>     {{students.name}}
+  </li>
+</ul>
