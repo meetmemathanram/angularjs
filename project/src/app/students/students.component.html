@@ -1,10 +1,10 @@
 <h2>Details</h2>
-<div>
+<div align="center">
   <label>name:
   <input [(ngModel)]="students.name" placeholder="name">
   </label>
 </div>
-<div>
+<div align="center">
   <label>ID:  
   <input [(ngModel)]="students.id" placeholder="enter ID">
   </label>
@@ -16,9 +16,10 @@
 </div>
 <div><span><b>name :</b></span> {{ students.name| uppercase }}</div>
 <h2>My Students</h2>
+<div align="center">
 <ul class ="students">
   <li *ngFor="let students of stud">
-  <span class="badge">{{students.id}}</span>         
-  {{students.name}}
+  <span class="badge">{{students.id}}</span>{{students.name}}
   </li>
 </ul>
+</div>
