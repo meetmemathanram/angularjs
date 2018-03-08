@@ -7,12 +7,17 @@ import { STUDENT } from '../mock-students';
   styleUrls: ['./students.component.css']
 })
 export class StudentsComponent implements OnInit {
+ 
   stud = STUDENT;
   name = ''
-  students : student = {
-    id : 1,
-    name : ''
+  students: student = {
+    id: 1,
+    name: ''
   };
+  selectedstudent: student;
+  onselect(student: student): void {
+    this.selectedstudent = student;
+  }
   constructor() { }
 
   ngOnInit() {
