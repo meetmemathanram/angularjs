@@ -20,8 +20,10 @@
       <b>name :</b>
     </span>{{ selectedstudent.name| uppercase }}</div>
   <h2>My Students</h2>
-  <ul class="students">
-    <li *ngFor="let students of stud" (click)="onselect(students)">
+  <ul class="students" >
+    <li *ngFor="let students of stud"
+    [class.selected]="students === selectedstudent"
+    (click)="onselect(students)">
       <span class="badge">{{students.id}}</span>
       {{students.name}}
     </li>
